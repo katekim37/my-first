@@ -67,19 +67,25 @@ export default function Home() {
         {/* 버튼 영역 (Soft Periwinkle & Wisteria 포인트 컬러) */}
         <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto justify-center">
           <a
-            className="flex h-12 items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#957FEF] to-[#B79CED] px-7 text-white font-semibold text-sm shadow-lg shadow-[#957FEF]/30 hover:shadow-[#957FEF]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="flex h-12 items-center justify-center gap-2.5 rounded-full border-2 border-[#B79CED] bg-white/80 px-7 text-[#2E1E4A] font-semibold text-sm hover:bg-[#DEC0F1]/25 hover:border-[#957FEF] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-sm"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              className="invert h-[14px] w-4"
+              className="h-[14px] w-4"
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
               height={14}
             />
             Deploy Now
+          </a>
+          <a
+            className="flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#957FEF] to-[#B79CED] px-7 text-white font-semibold text-sm shadow-lg shadow-[#957FEF]/30 hover:shadow-[#957FEF]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            href="/contact"
+          >
+            문의하기
           </a>
           <a
             className="flex h-12 items-center justify-center rounded-full border-2 border-[#B79CED] bg-white/80 px-7 text-[#2E1E4A] font-semibold text-sm hover:bg-[#DEC0F1]/25 hover:border-[#957FEF] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-sm"
