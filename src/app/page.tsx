@@ -11,16 +11,13 @@ export default function Home() {
       {/* 메인 카드 컨테이너 */}
       <main className="relative z-10 flex flex-1 w-full max-w-2xl flex-col items-center justify-between py-16 px-8 sm:px-14 bg-white/75 backdrop-blur-xl border border-white/70 rounded-3xl shadow-2xl shadow-[#957FEF]/15 text-center my-8">
         
-        {/* Next.js 로고 */}
+        {/* 상단 로고 텍스트 */}
         <div className="flex items-center justify-center mb-8">
-          <Image
-            className="h-6 w-auto drop-shadow-sm opacity-90"
-            src="/next.svg"
-            alt="Next.js logo"
-            width={110}
-            height={24}
-            priority
-          />
+          <p className="text-xl font-extrabold tracking-tight leading-snug text-center text-[#2E1E4A]">
+            바이브 코딩
+            <br />
+            연구소
+          </p>
         </div>
 
         {/* 텍스트 콘텐츠 영역 */}
