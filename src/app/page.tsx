@@ -63,21 +63,7 @@ export default function Home() {
 
           {/* 본문 텍스트 (조화로운 딥 퍼플/뮤트 텍스트 컬러) */}
           <p className="text-base sm:text-lg leading-relaxed text-[#6B5B82]">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-semibold text-[#957FEF] hover:text-[#7D64E6] underline underline-offset-4 decoration-[#B79CED]/70 hover:decoration-[#957FEF] transition-all"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-semibold text-[#957FEF] hover:text-[#7D64E6] underline underline-offset-4 decoration-[#B79CED]/70 hover:decoration-[#957FEF] transition-all"
-            >
-              Learning
-            </a>{" "}
-            center.
+            바이브 코딩 여러분도 할 수 있습니다
           </p>
         </div>
 
