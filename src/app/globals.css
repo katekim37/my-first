@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --powder-petal: #EFD9CE;
+  --mauve: #DEC0F1;
+  --wisteria: #B79CED;
+  --periwinkle: #957FEF;
+  --deep-purple: #2E1E4A;
+  --text-muted: #6B5B82;
+
+  --background: #EFD9CE;
+  --foreground: #2E1E4A;
+}
+
+@theme inline {
+  --color-powder-petal: #EFD9CE;
+  --color-mauve: #DEC0F1;
+  --color-wisteria: #B79CED;
+  --color-periwinkle: #957FEF;
+  --color-deep-purple: #2E1E4A;
+  --color-text-muted: #6B5B82;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
