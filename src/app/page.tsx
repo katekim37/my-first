@@ -62,8 +62,8 @@ export default function Home() {
           </div>
 
           {/* 본문 텍스트 (조화로운 딥 퍼플/뮤트 텍스트 컬러) */}
-          <p className="text-base sm:text-lg leading-relaxed text-[#6B5B82]">
-            바이브 코딩 여러분도 할 수 있습니다
+          <p className="text-base sm:text-lg leading-relaxed font-bold text-black">
+            바이브 코딩 여러분도 할 수 있습니다!
           </p>
         </div>
 
