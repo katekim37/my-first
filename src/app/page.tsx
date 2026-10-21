@@ -40,7 +40,10 @@ export default function Home() {
             <span className="text-[#2E1E4A]">
               오늘도
               <br />
-              화이팅입니다!
+              <span className="bg-gradient-to-r from-[#957FEF] via-[#856EE0] to-[#B79CED] bg-clip-text text-transparent">
+                화이팅
+              </span>
+              입니다!
             </span>
           </h1>
 
