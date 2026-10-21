@@ -1,33 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState } from "react";
+import { sendContact } from "./actions";
 
 const inputClass =
   "w-full rounded-xl border-2 border-[#DEC0F1] bg-white/90 px-4 py-3 text-[#2E1E4A] placeholder:text-[#6B5B82]/60 focus:border-[#957FEF] focus:outline-none transition-colors";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState(sendContact, null);
 
-  if (submitted) {
+  if (state?.ok) {
     return (
       <div className="w-full rounded-2xl bg-[#DEC0F1]/30 border border-[#B79CED]/50 p-6 text-center">
-        <p className="font-bold text-[#2E1E4A]">입력해 주셔서 감사합니다!</p>
-        {/* 아직 실제 전송 기능은 연결되지 않음 */}
-        <p className="mt-2 text-sm text-[#6B5B82]">
-          문의 전송 기능은 준비 중입니다.
-        </p>
+        <p className="font-bold text-[#2E1E4A]">감사합니다!</p>
+        <p className="mt-2 text-sm text-[#6B5B82]">{state.message}</p>
       </div>
     );
   }
 
   return (
-    <form
-      className="flex w-full flex-col gap-5 text-left"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-    >
+    <form action={formAction} className="flex w-full flex-col gap-5 text-left">
       <label className="flex flex-col gap-2">
         <span className="text-sm font-semibold text-[#2E1E4A]">
           이름 <span className="text-[#957FEF]">*</span>
@@ -66,11 +58,16 @@ export default function ContactForm() {
         />
       </label>
 
+      {state && !state.ok && (
+        <p className="text-sm font-semibold text-red-600 text-center">{state.message}</p>
+      )}
+
       <button
         type="submit"
-        className="mt-2 flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#957FEF] to-[#B79CED] px-7 text-white font-semibold text-sm shadow-lg shadow-[#957FEF]/30 hover:shadow-[#957FEF]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+        disabled={pending}
+        className="mt-2 flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#957FEF] to-[#B79CED] px-7 text-white font-semibold text-sm shadow-lg shadow-[#957FEF]/30 hover:shadow-[#957FEF]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:hover:scale-100"
       >
-        보내기
+        {pending ? "보내는 중..." : "보내기"}
       </button>
     </form>
   );
